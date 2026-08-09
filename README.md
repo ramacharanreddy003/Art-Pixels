@@ -3,7 +3,7 @@
 
 Personal creative portfolio of **Rama Charan Reddy Chinnakambaiah Gari** — showcasing pencil sketches and nature photography.
 
-🔗 **Live site:** [ramacharanreddy003.github.io/Pencils-and-Pixels](https://ramacharanreddy003.github.io/Pencils-and-Pixels/)
+🔗 **Live site:** https://ramacharanreddy003.github.io/Art-Pixels/
 
 ## About
 
@@ -18,16 +18,10 @@ I'm a Computer Science and Engineering graduate based in Kadapa, Andhra Pradesh,
 
 ## Built With
 
-- HTML5 & CSS3 (responsive grid layout, no framework)
-- [Google Fonts](https://fonts.google.com/) (Poppins)
-- [Font Awesome](https://fontawesome.com/) & [Bootstrap Icons](https://icons.getbootstrap.com/) for icons
+- HTML5 & CSS3 
 - Images hosted on [Cloudinary](https://cloudinary.com/) and GitHub raw content
 - Hosted for free on [GitHub Pages](https://pages.github.com/)
-
-## Running Locally
-
-This is a static site with no build step. Just clone the repo and open `index.html` in a browser:
-
+- 
 ## Contact
 
 - 📧 [ckramacharanreddy@gmail.com](mailto:ckramacharanreddy@gmail.com)
