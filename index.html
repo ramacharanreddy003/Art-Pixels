@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Creative portfolio of Ram Charan Reddy — pencil sketches, art, and nature photography.">
+    <title>Charan Reddy | Pencils & Pixels</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            overflow-x: visible;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        .heads {
+            border-radius: 5px;
+        }
+
+        .head1 {
+            text-align: center;
+            height: auto;
+            padding: 15px;
+            background: #222;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        .head1 h1 {
+            margin: 0;
+        }
+
+        .head2 h2 {
+            margin-top: 10px;
+        }
+
+        .navbar {
+            background-color: burlywood;
+            font-size: 20px;
+            height: auto;
+            text-decoration: none;
+            align-items: center;
+            position: sticky;
+            top: 60px;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 5px;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 4px;
+            font-size: 18px;
+            border-radius: 150px;
+        }
+
+        .navbar a:hover {
+            color: black;
+        }
+
+        .aboutme {
+            text-align: center;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: auto;
+        }
+
+        .aboutme p {
+            font-size: 20px;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .profile-photo {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .head2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .images img:hover {
+            transform: scale(1.03);
+        }
+
+        .images img {
+            width: 100%;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+            transition: .3s;
+            display: block;
+            break-inside: avoid;
+        }
+
+        .natureimages img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+        }
+
+        .natureimages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            gap: 20px;
+        }
+
+        .natureimages img:hover {
+            transform: scale(1.03);
+        }
+
+        .contact {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .contact a {
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .mail {
+            color: #EA4335;
+        }
+
+        .linkedin {
+            color: #0A66C2;
+        }
+
+        .github {
+            color: black;
+        }
+
+        .instagram {
+            color: #E4405F;
+        }
+
+        .thankyou {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            padding-top: 0px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: #fff;
+        }
+
+        .top a {
+            align-items: center;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+
+        }
+
+        .top {
+            padding-top: 5px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+
+        }
+
+        .top-float a:hover {
+            color: burlywood;
+        }
+        .top-float,
+        .bottom-float {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+            z-index: 1000;
+        }
+
+        .top-float {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .bottom-float {
+            right: 20px;
+            bottom: 450px;
+        }
+
+        .top-float a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .top-float:hover,
+        .bottom-float:hover {
+            transform: translateY(-4px);
+            transition: .3s;
+        }
+
+        .bottom-float a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .bottom-float a:hover {
+            color: burlywood;
+        }
+
+        /* ===========================
+   Responsive Design
+=========================== */
+
+        @media (max-width:1200px) {
+            .natureimages {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width:768px) {
+            section {
+                padding: 30px 15px;
+            }
+
+            .head1 {
+                padding: 12px;
+            }
+
+            .head1 h1 {
+                font-size: 28px;
+            }
+
+            .navbar {
+                position: sticky;
+                justify-content: center;
+                gap: 4px;
+                padding: 8px;
+            }
+
+            .navbar a {
+                font-size: 16px;
+                padding: 6px 8px;
+                margin: 1px;
+            }
+
+            .aboutme p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            .images {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .natureimages {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .contact {
+                font-size: 18px;
+            }
+
+            .top a {
+                font-size: 18px;
+            }
+            .top-float {
+                right: 15px;
+                bottom: 45px;
+            }
+
+            /* .bottom-float {
+                display: none;
+            } */
+
+            .bottom-float {
+                right: 15px;
+                bottom: 350px;
+            }
+        }
+
+        @media (max-width:480px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            section {
+                padding: 20px 12px;
+            }
+
+            .head1 {
+                padding: 10px;
+            }
+
+            .head1 h1 {
+                font-size: 24px;
+            }
+
+            .head2 h2 {
+                font-size: 22px;
+            }
+
+            .navbar {
+                position: static;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px;
+                padding: 10px;
+            }
+
+            .navbar a {
+                font-size: 15px;
+                padding: 8px 10px;
+                margin: 2px;
+            }
+
+            .aboutme p {
+                font-size: 16px;
+                line-height: 1.7;
+                text-align: justify;
+            }
+
+            .images {
+                grid-template-columns: 1fr;
+                padding: 10px;
+                gap: 15px;
+            }
+
+            .natureimages {
+                grid-template-columns: 1fr;
+                padding: 10px;
+                gap: 15px;
+            }
+
+            .images img,
+            .natureimages img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .contact {
+                font-size: 16px;
+            }
+
+            .contact a {
+                word-break: break-word;
+            }
+
+            .top {
+                gap: 8px;
+            }
+
+            .top a {
+                font-size: 16px;
+            }
+
+            .thankyou {
+                font-size: 18px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+
+            .floating-icon {
+                right: 15px;
+                bottom: 80px;
+                /* Moves it above the bottom */
+                font-size: 40px;
+            }
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body id="top">
+
+    <div class="head1">
+        <h1>Pencils & Pixels</h1>
+    </div>
+
+    <div class="navbar">
+
+        <a href="#aboutme">About me</a>
+        <a href="#Art">Art</a>
+        <a href="#MyPhotography">Photography</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+    <!-- <div>
+        <div class="bottom-float text-decoration-none">
+            <a href="#contact" class="top-btn">Bottom&darr;</a>
+        </div>
+
+    </div> -->
+    <div class="bottom-float">
+        <a href="#contact">
+            <i class="bi bi-arrow-down"></i>
+        </a>
+    </div>
+
+    <div class="top-float">
+        <a href="#top">
+            <i class="bi bi-arrow-up"></i>
+        </a>
+    </div>
+
+    <section class="aboutme" id="aboutme">
+        <h2 class="heads">About me</h2>
+        <div class="profile-photo">
+            <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103021/IMG_20260221_211948_699_web_keowp5.jpg"
+                alt="Profile_Photo" class="profile-photo">
+        </div>
+        <p>
+            Hi, I'm <b>Rama Charan Reddy Chinnakambaiah Gari</b>, a Computer Science and Engineering graduate based in
+            Kadapa, Andhra Pradesh, with a
+            passion for creativity
+            and
+            technology.
+            Alongside my interest in software development, I enjoy creating realistic pencil sketches and capturing the
+            beauty
+            of nature through photography.
+        </p>
+    </section>
+
+    <section class="gallery">
+        <div class="head2" id="Art">
+            <h2 class="heads">Art Gallery</h2>
+        </div>
+
+        <div class="images" style="text-align: center;">
+            
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103094/IMG20260627191402_web_xzif0l.jpg"
+                    alt="Pencil sketch of a dance pose" loading="lazy">
+                <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103094/IMG20260627191402_web_xzif0l.jpg"
+                    download="img.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103028/IMG_20260709_130632_web_r6ini6.jpg"
+                    alt="Pencil sketch of Krishna" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103028/IMG_20260709_130632_web_r6ini6.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103021/IMG_20260329_203129_web_ymv6ny.jpg"
+                    alt="Pencil sketch of a girl" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103021/IMG_20260329_203129_web_ymv6ny.jpg">Download</a>
+            </div>
+            
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103092/IMG20260524205810_web_brajoe.jpg"
+                    alt="Pencil sketch, portrait study" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103092/IMG20260524205810_web_brajoe.jpg">Download</a>
+            </div>
+             <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103028/IMG_20260710_205515_web_g0a0uk.jpg"
+                    alt="pencil sketc" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103028/IMG_20260710_205515_web_g0a0uk.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103022/IMG_20260409_151355_web_ardlpc.jpg"
+                    alt="Pencil sketch of a girl with a butterfly" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103022/IMG_20260409_151355_web_ardlpc.jpg">Download</a>
+            </div>
+             <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103030/IMG_20260717_172803_web_jsgjn4.jpg"
+                    alt="Rama" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103030/IMG_20260717_172803_web_jsgjn4.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103027/IMG_20260627_191443_web_iczydg.jpg"
+                    alt="Pencil sketch of a woman" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103027/IMG_20260627_191443_web_iczydg.jpg">Download</a>
+            </div>
+              <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103098/IMG20260802122459_web_bhqixk.jpg"
+                    alt="Hat_man" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103098/IMG20260802122459_web_bhqixk.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103093/IMG20260610172226_web_tpi4g0.jpg"
+                    alt="Pencil sketch of Buddha" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103093/IMG20260610172226_web_tpi4g0.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103059/IMG20240506173234_web_a1qirc.jpg"
+                    alt="Pencil sketch of a boy" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103059/IMG20240506173234_web_a1qirc.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103023/IMG_20260524_210023_web_t3xsrd.jpg"
+                    alt="Pencil sketch of a camera" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103023/IMG_20260524_210023_web_t3xsrd.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103024/IMG_20260524_210204_web_voqwkf.jpg"
+                    alt="Pencil sketch of Hanuman" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103024/IMG_20260524_210204_web_voqwkf.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103025/IMG_20260531_110310_web_m1q7ka.jpg"
+                    alt="Pencil sketch of a farmer" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103025/IMG_20260531_110310_web_m1q7ka.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103025/IMG_20260613_232922_web_vwegu4.jpg"
+                    alt="Pencil sketch of a girl" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103025/IMG_20260613_232922_web_vwegu4.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103027/IMG_20260621_235643_web_nwyj9w.jpg"
+                    alt="Pencil sketch of a heart" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103027/IMG_20260621_235643_web_nwyj9w.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103027/IMG_20260702_222608_web_i96p8b.jpg"
+                    alt="Pencil sketch of Radha" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103027/IMG_20260702_222608_web_i96p8b.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103025/IMG_20260606_233908_web_tlwuhg.jpg"
+                    alt="Pencil sketch of a boy and girl having coffee" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103025/IMG_20260606_233908_web_tlwuhg.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103024/IMG_20260524_212424_web_fmcxtl.jpg"
+                    alt="Pencil sketch of a girl" loading="lazy">
+                <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103024/IMG_20260524_212424_web_fmcxtl.jpg">Download
+                </a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103023/IMG_20260524_210126_web_rlkevy.jpg"
+                    alt="Pencil sketch, art piece" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103023/IMG_20260524_210126_web_rlkevy.jpg">Download</a>
+            </div>
+           
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103086/IMG20260212171817_web_niraut.jpg"
+                    alt="Pencil sketch, art piece" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103086/IMG20260212171817_web_niraut.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786271003/copy_of_img20260211222943_web_y1lrmv.jpg"
+                    alt="Pencil sketch, art piece" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103085/IMG20260211222943_web_y1lrmv.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103097/IMG20260729200551_web_bufk1k.jpg"
+                    alt="Kishna" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103097/IMG20260729200551_web_bufk1k.jpg">Download</a>
+            </div>
+          
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103098/IMG20260802122556_web_knb9qq.jpg" alt=""
+                    loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103098/IMG20260802122556_web_knb9qq.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103096/IMG20260722230104_web_zf4uhz.jpg"
+                    alt="women" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103096/IMG20260722230104_web_zf4uhz.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103099/IMG20260802122614_web_xaimwu.jpg"
+                    alt="girl_with_camera" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103099/IMG20260802122614_web_xaimwu.jpg">Download</a>
+            </div>
+           
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103084/IMG20260121201039_web_sjeesd.jpg"
+                    alt="img" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103084/IMG20260121201039_web_sjeesd.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103032/IMG_20260803_171703_web_ikszcj.jpg"
+                    alt="image" loading="lazy">
+                <a
+                    href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103032/IMG_20260803_171703_web_ikszcj.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786269636/women_wqumda.jpg" alt="img" loading="lazy">
+                <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786269636/women_wqumda.jpg">Download</a>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786269636/WhatsApp_Image_2026-08-09_at_3.25.51_PM_thdm5l.jpg" alt="img" loading="lazy">
+                <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786269636/WhatsApp_Image_2026-08-09_at_3.25.51_PM_thdm5l.jpg">Download</a>
+            </div>
+            </div>
+
+            <div class="head2" id="MyPhotography">
+                <h2 class="heads">Photography</h2>
+                <section class="natureimages">
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103076/IMG20251020133112_web_zt99t2.jpg"
+                        alt="Temple photograph" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103076/IMG20251020133112_web_zt99t2.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103076/IMG20251020130733_web_ybmqn7.jpg"
+                        alt="Temple entrance photograph" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103076/IMG20251020130733_web_ybmqn7.jpg">Download</a>
+                </div>
+
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103076/IMG20251020133112_web_zt99t2.jpg"
+                        alt="img" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103076/IMG20251020133112_web_zt99t2.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103038/IMG-20260804-WA0005_web_w4eg86.jpg" alt="temple" loading="lazy">
+                    <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103038/IMG-20260804-WA0005_web_w4eg86.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103069/IMG20250809101700_web_sokdqz.jpg" alt="temple" loading="lazy">
+                    <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103069/IMG20250809101700_web_sokdqz.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103019/IMG_20250710_175414_web_r4xgoc.jpg" alt="temple" loading="lazy">
+                    <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103019/IMG_20250710_175414_web_r4xgoc.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786257770/WhatsApp_Image_2026-08-09_at_12.10.59_PM_e6vulc.jpg" alt="lord rama" loading="lazy">
+                    <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786257770/WhatsApp_Image_2026-08-09_at_12.10.59_PM_e6vulc.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103067/IMG20250710151550_web_xgzwvf.jpg"
+                        alt="Nature photograph" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103067/IMG20250710151550_web_xgzwvf.jpg">Download</a>
+                </div>
+                                    
+                <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103077/IMG20251020173532_web_uq7qyl.jpg"
+                        alt="Sunset over a field" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103077/IMG20251020173532_web_uq7qyl.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103078/IMG20251020173549_web_wfj63k.jpg"
+                        alt="img" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103078/IMG20251020173549_web_wfj63k.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103033/IMG-20251022-WA0011_web_jvor9c.jpg" alt="rainbow" loading="lazy">
+                    <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103033/IMG-20251022-WA0011_web_jvor9c.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103074/IMG20251020122038_web_xm0pto.jpg"
+                        alt="Elephant photograph" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103074/IMG20251020122038_web_xm0pto.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://raw.githubusercontent.com/ramacharanreddy003/Nature_Images-/main/IMG20251020122121.jpg"
+                        alt="Stone deity sculpture" loading="lazy">
+                    <a
+                        href="https://raw.githubusercontent.com/ramacharanreddy003/Nature_Images-/main/IMG20251020122121.jpg">Download</a>
+                </div>
+                    <div>   
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103074/IMG20251020122107_web_qpbcap.jpg" alt="img" loading="lazy">
+                    <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103074/IMG20251020122107_web_qpbcap.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103074/IMG20251020121818_web_q8au5l.jpg" alt="Stone deity sculpture" loading="lazy">
+                    <a href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103074/IMG20251020121818_web_q8au5l.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103073/IMG20251020121811_web_pc4erm.jpg"
+                        alt="img" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103073/IMG20251020121811_web_pc4erm.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103018/Hanuman_web_kjmr72.jpg"
+                        alt="Hanuman statue" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103018/Hanuman_web_kjmr72.jpg">Download</a>
+                </div>
+
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103049/IMG20240106011135_web_thia20.jpg"
+                        alt="venkat" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103049/IMG20240106011135_web_thia20.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103019/IMG_20251225_125837_web_gsfch2.jpg"
+                        alt="Blue lake photograph" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103019/IMG_20251225_125837_web_gsfch2.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103062/IMG20241024120337_web_tyfpnx.jpg"
+                        alt="temple" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103062/IMG20241024120337_web_tyfpnx.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103067/IMG20250710151612_web_bibw7k.jpg"
+                        alt="Green paddy field" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103067/IMG20250710151612_web_bibw7k.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103018/f1gwjd_web_qfjyzn.jpg"
+                        alt="White flower photograph" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103018/f1gwjd_web_qfjyzn.jpg">Download</a>
+                </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103020/IMG_20260107_220207_web_a2capx.jpg"
+                        alt="Tangedu flower photograph" loading="lazy">
+                    <a
+                        href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103020/IMG_20260107_220207_web_a2capx.jpg">Download</a>
+                </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103036/IMG-20260707-WA0001_web_cdypap.jpg"
+                            alt="birds" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103036/IMG-20260707-WA0001_web_cdypap.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103046/IMG20231026174746_web_dlw21c.jpg"
+                            alt="image" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103046/IMG20231026174746_web_dlw21c.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707174952_web_ubghhb.jpg"
+                            alt="Clouds photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707174952_web_ubghhb.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707175018_web_ljapza.jpg"
+                            alt="Clouds photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707175018_web_ljapza.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103091/IMG20260322171034_web_tsfhdm.jpg"
+                            alt="Lake photograph 1" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103091/IMG20260322171034_web_tsfhdm.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103091/IMG20260322171030_web_sgco8j.jpg"
+                            alt="Lake photograph 2" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103091/IMG20260322171030_web_sgco8j.jpg">Download</a>
+                    </div>
+                   
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103090/IMG20260322171010_web_ox955l.jpg"
+                            alt="Lake photograph 4" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103090/IMG20260322171010_web_ox955l.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103090/IMG20260322171004_web_znwq8a.jpg"
+                            alt="Lake photograph 5" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103090/IMG20260322171004_web_znwq8a.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103089/IMG20260322170950_web_ctez6v.jpg"
+                            alt="Lake photograph 6" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103089/IMG20260322170950_web_ctez6v.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103089/IMG20260322170932_web_dwamlq.jpg"
+                            alt="Lake photograph 7" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103089/IMG20260322170932_web_dwamlq.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103088/IMG20260322170925_web_giru2j.jpg"
+                            alt="Railway track photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103088/IMG20260322170925_web_giru2j.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103080/IMG20251214175752_web_b50sqk.jpg"
+                            alt="Nature photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103080/IMG20251214175752_web_b50sqk.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103080/IMG20251214175748_web_lecq2r.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103080/IMG20251214175748_web_lecq2r.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103084/IMG20260211161808_web_kdn3hi.jpg"
+                            alt="image" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103084/IMG20260211161808_web_kdn3hi.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103085/IMG20260211161930_web_gx2u4g.jpg"
+                            alt="sky" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103085/IMG20260211161930_web_gx2u4g.jpg">Download</a>
+                    </div>
+                   
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103088/IMG20260225090248_web_i5o2y9.jpg"
+                            alt="White flower photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103088/IMG20260225090248_web_i5o2y9.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103061/IMG20240818090125_web_q6nxes.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103061/IMG20240818090125_web_q6nxes.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103061/IMG20240818085256_web_o5yqss.jpg"
+                            alt="image" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103061/IMG20240818085256_web_o5yqss.jpg">Download</a>
+                    </div>
+
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103087/IMG20260225090238_web_nfkxie.jpg"
+                            alt="White flower photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103087/IMG20260225090238_web_nfkxie.jpg">Download</a>
+                    </div>
+
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103062/IMG20240907085058_web_fcm5m2.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103062/IMG20240907085058_web_fcm5m2.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786260722/WhatsApp_Image_2026-08-09_at_12.59.31_PM_wegnuz.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786260722/WhatsApp_Image_2026-08-09_at_12.59.31_PM_wegnuz.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103086/IMG20260223094505_web_s7xpcr.jpg"
+                            alt="Blue flower photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103086/IMG20260223094505_web_s7xpcr.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103083/IMG20260108081143_web_n14c8s.jpg"
+                            alt="Yellow flower photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103083/IMG20260108081143_web_n14c8s.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103082/IMG20260108081127_web_vjqiml.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103082/IMG20260108081127_web_vjqiml.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103079/IMG20251201081340_web_zrmvb8.jpg"
+                            alt="Chrysanthemum flower photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103079/IMG20251201081340_web_zrmvb8.jpg">Download</a>
+                    </div>
+
+                    <div>
+                        <img src="https://raw.githubusercontent.com/ramacharanreddy003/Nature_Images-/main/IMG20251020173549.jpg"
+                            alt="Sunset over a field" loading="lazy">
+                        <a
+                            href="https://raw.githubusercontent.com/ramacharanreddy003/Nature_Images-/main/IMG20251020173549.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103036/IMG-20260707-WA0000_web_pfxczf.jpg"
+                            alt="sunrise" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103036/IMG-20260707-WA0000_web_pfxczf.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103070/IMG20250826162156_web_bklulw.jpg"
+                            alt="Onion field photograph" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103070/IMG20250826162156_web_bklulw.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103064/IMG20250112125350_web_gnvi2x.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103064/IMG20250112125350_web_gnvi2x.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103065/IMG20250112125533_web_l1bkj9.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103065/IMG20250112125533_web_l1bkj9.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103066/IMG20250112150513_web_jd7nhh.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103066/IMG20250112150513_web_jd7nhh.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103067/IMG20250223154116_web_tycuff.jpg"
+                            alt="mirchi_Image" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103067/IMG20250223154116_web_tycuff.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103034/IMG-20260109-WA0000_web_axh3t2.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103034/IMG-20260109-WA0000_web_axh3t2.jpg">Download</a>
+                    </div>
+
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103058/IMG20240308084904_web_bvkuwd.jpg"
+                            alt="flower" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103058/IMG20240308084904_web_bvkuwd.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103058/IMG20240308084822_web_hpo1rd.jpg"
+                            alt="flower" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103058/IMG20240308084822_web_hpo1rd.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103051/IMG20240308084727_web_xwzpqx.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103051/IMG20240308084727_web_xwzpqx.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103050/IMG20240308071630_web_eskvg7.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103050/IMG20240308071630_web_eskvg7.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103057/IMG20240308084801_web_cgndaw.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103057/IMG20240308084801_web_cgndaw.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103057/IMG20240308084753_web_g2yupg.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103057/IMG20240308084753_web_g2yupg.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103050/IMG20240308084715_web_bsaw9c.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103050/IMG20240308084715_web_bsaw9c.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103046/IMG20231026064431_web_erz4hv.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103046/IMG20231026064431_web_erz4hv.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103046/IMG20231026064659_web_f5wliq.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103046/IMG20231026064659_web_f5wliq.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103018/-3o8mxj_web_uozeak.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103018/-3o8mxj_web_uozeak.jpg">Download</a>
+                    </div>
+                   
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103100/Snapchat-509231530_web_dymrnk.jpg"
+                            alt="shiva" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103100/Snapchat-509231530_web_dymrnk.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103043/IMG20230916194434_web_fklnba.jpg"
+                            alt="temple" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103043/IMG20230916194434_web_fklnba.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103100/Snapchat-772658766_web_ki0cas.jpg"
+                            alt="temple" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103100/Snapchat-772658766_web_ki0cas.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103068/IMG20250710191600_web_ojhhpy.jpg"
+                            alt="moon" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103068/IMG20250710191600_web_ojhhpy.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103063/IMG20241123095358_web_wxtr5w.jpg"
+                            alt="hanuman" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103063/IMG20241123095358_web_wxtr5w.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707135014_web_perg1o.jpg"
+                            alt="sky" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707135014_web_perg1o.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707174952_web_ubghhb.jpg"
+                            alt="sky" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707174952_web_ubghhb.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707175018_web_ljapza.jpg"
+                            alt="sky" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103095/IMG20260707175018_web_ljapza.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103061/IMG20240508180356_web_zxnvcl.jpg"
+                            alt="deer" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103061/IMG20240508180356_web_zxnvcl.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103048/IMG20231223202709_web_os7cwk.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103048/IMG20231223202709_web_os7cwk.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103048/IMG20231223202727_01_web_zpgqs4.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103048/IMG20231223202727_01_web_zpgqs4.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103047/IMG20231220213853_web_wvadzb.jpg"
+                            alt="pen & book" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103047/IMG20231220213853_web_wvadzb.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103047/IMG20231028072823_web_rnyi78.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103047/IMG20231028072823_web_rnyi78.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103045/IMG20231025084436_web_cfl3i2.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103045/IMG20231025084436_web_cfl3i2.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103043/IMG20231021074951_web_o0gv8w.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103043/IMG20231021074951_web_o0gv8w.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103042/IMG20230719183842_web_qmnzxp.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103042/IMG20230719183842_web_qmnzxp.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103041/IMG20230603094022_web_rdcryo.jpg"
+                            alt="image" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103041/IMG20230603094022_web_rdcryo.jpg">Download</a>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103041/IMG20230528101259_web_fjz0y9.jpg"
+                            alt="img" loading="lazy">
+                        <a
+                            href="https://res.cloudinary.com/dqd1b9zru/image/upload/v1786103041/IMG20230528101259_web_fjz0y9.jpg">Download</a>
+                    </div>
+                </section>
+            </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heads">Contact</h2>
+        <p>
+            <a href="mailto:ckramacharanreddy@gmail.com" class="mail"><i class="fa-regular fa-envelope">
+                </i>ckramacharanreddy@gmail.com</a><br>
+            <a href="https://www.linkedin.com/in/rama-charan-reddy-ck-952aa2312" class="linkedin" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i>Linkedin</a><br>
+            <a href="https://www.github.com/ramacharanreddy003" class="github" target="_blank"><i
+                    class="fa-brands fa-github"></i>GitHub</a><br>
+            <a href="https://www.instagram.com/charan_reddy.03" class="instagram" target="_blank"><i
+                    class="fa-brands fa-instagram"></i>Instagram</a><br>
+            <a href="https://www.instagram.com/art_and_.bloom/" class="instagram" target="_blank"><i
+                    class="fa-brands fa-instagram"></i>Instagram</a>
+        </p>
+
+    </section>
+
+    <section class="thankyou">
+        <p>Thank you for visiting!</p>
+    </section>
+    <footer>
+        2026 Charan Reddy | Made with ❤️
+    </footer>
+
+
+</body>
+
+</html>
